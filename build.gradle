@@ -1,0 +1,63 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm' version "${kotlin_version}"
+    id 'net.neoforged.moddev' version "${moddev_version}"
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+kotlin {
+    jvmToolchain(21)
+}
+
+repositories {
+    mavenLocal()
+    // Cobblemon
+    maven {
+        name = 'Cobblemon'
+        url = 'https://artefacts.cobblemon.com/releases/'
+    }
+    // Kotlin for Forge
+    maven {
+        name = 'Kotlin for Forge'
+        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+        content { includeGroup 'thedarkcolour' }
+    }
+}
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+dependencies {
+    implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+    implementation "com.cobblemon:neoforge:${cobblemon_version}"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

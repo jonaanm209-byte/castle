@@ -1,0 +1,33 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[5,)"
+license = "MIT"
+
+[[mods]]
+modId = "paradoxcastle"
+version = "1.0.0"
+displayName = "Paradox Castle"
+description = '''
+A rare castle hides pedestals that summon Koraidon and Miraidon. Find a key in the castle,
+charge it by knocking out wild paradox Pokémon, then use it on the matching pedestal.
+'''
+
+[[dependencies.paradoxcastle]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.paradoxcastle]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.paradoxcastle]]
+modId = "cobblemon"
+type = "required"
+versionRange = "[1.8,)"
+ordering = "AFTER"
+side = "BOTH"

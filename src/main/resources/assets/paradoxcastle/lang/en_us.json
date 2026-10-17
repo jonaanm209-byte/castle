@@ -1,0 +1,19 @@
+{
+  "itemGroup.paradoxcastle": "Paradox Castle",
+  "item.paradoxcastle.koraidon_key": "Koraidon Key",
+  "item.paradoxcastle.miraidon_key": "Miraidon Key",
+  "block.paradoxcastle.koraidon_pedestal": "Koraidon Pedestal",
+  "block.paradoxcastle.miraidon_pedestal": "Miraidon Pedestal",
+  "legend.paradoxcastle.koraidon": "Koraidon Key",
+  "legend.paradoxcastle.miraidon": "Miraidon Key",
+  "tooltip.paradoxcastle.charge": "Charge: %s/%s",
+  "tooltip.paradoxcastle.how_to_charge": "KO wild paradox Pok\u00e9mon to charge this key.",
+  "tooltip.paradoxcastle.ready": "Fully charged. Use it on its pedestal.",
+  "message.paradoxcastle.needs_key": "This pedestal needs a fully charged %s.",
+  "message.paradoxcastle.wrong_key": "This pedestal only answers to a %s.",
+  "message.paradoxcastle.not_charged": "The key is not charged yet (%s/%s).",
+  "message.paradoxcastle.key_charged": "%s charged: %s/%s",
+  "message.paradoxcastle.key_full": "%s is fully charged!",
+  "message.paradoxcastle.summoned": "The %s's power answers the pedestal...",
+  "message.paradoxcastle.summon_failed": "Something went wrong summoning the legendary. Is Cobblemon loaded correctly?"
+}
